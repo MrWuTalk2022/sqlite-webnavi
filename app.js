@@ -830,7 +830,7 @@ app.post('/api/categories/reorder', authenticateToken, async (req, res) => {
 // 标签相关路由
 app.get('/api/tags', async (req, res) => {
   try {
-    console.log('收到 /api/tags 请求');
+   // console.log('收到 /api/tags 请求');
     
     // 检查数据库连接
     if (!db) {
@@ -846,11 +846,11 @@ app.get('/api/tags', async (req, res) => {
       GROUP BY t.id
     `;
     
-    console.log('执行SQL查询:', sql);
+   // console.log('执行SQL查询:', sql);
     
     const tags = await db.all(sql);
     
-    console.log(`查询成功，返回 ${tags.length} 个标签:`, tags);
+  //  console.log(`查询成功，返回 ${tags.length} 个标签:`, tags);
     
     // 确保返回数组而不是null
     res.json(tags || []);
