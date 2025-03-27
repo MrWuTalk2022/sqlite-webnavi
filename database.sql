@@ -176,4 +176,4 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- 插入默认管理员用户（仅在表为空时）
 INSERT OR IGNORE INTO users (username, password, role) VALUES 
-    ('admin', '123456', 'admin');
+    ('admin', 'admin123', 'admin');
